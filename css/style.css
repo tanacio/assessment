@@ -454,7 +454,7 @@ header label {
 #seats.meeting .seated {
   -webkit-box-shadow: inset 5px 5px 6px #c8ccc8, inset -5px -5px 6px #ffffff;
           box-shadow: inset 5px 5px 6px #c8ccc8, inset -5px -5px 6px #ffffff;
-  color: #777;
+  color: #aaa;
 }
 
 #seats.meeting .current {
@@ -524,3 +524,4 @@ header label {
 #seats.over-columns40 > div:after {
   margin: -12px 0 0 -6px !important;
 }
+/*# sourceMappingURL=style.css.map */
