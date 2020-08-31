@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>席決めアプリ | 飲み会・会議・セミナー・教室の席替え</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://tanacio.github.io/seats/" />
+  <meta property="og:title" content="席決めアプリ | 飲み会・会議・セミナー・教室の席替え" />
+  <meta property="og:description"
+    content="飲み会・会議・セミナー・教室の席替えなどの席を個別に抽選するアプリです。飲み会では男女バラバラになるようになっています。会議・セミナーはソーシャルディスタンスを保てるオプションもあります。" />
+  <meta property="og:image" content="https://tanacio.github.io/seats/image/cover.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,800;1,900&family=Kosugi+Maru&family=Roboto+Mono:wght@700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>席決めアプリ</h1>
+    <div>
+      <div>
+        <div class="people">
+          <input type="number" id="number-input" min="4" max="100" step="1" placeholder="参加人数" />
+          <div>
+            <div id="condition"></div>
+            <div id="number-error"></div>
+          </div>
+        </div>
+        <div class="category">
+          <input type="radio" name="type" id="drinking" />
+          <label for="drinking" id="drinking-label">飲み会</label>
+          <input type="radio" name="type" id="meeting" />
+          <label for="meeting" id="meeting-label">会議・セミナー</label>
+        </div>
+        <div class="option">
+          <div id="balance">
+            <input type="radio" name="balance" value="男女同数" id="same" checked />
+            <label for="same">男女同数</label>
+            <input type="radio" name="balance" value="男性が多い" id="mostly-male" />
+            <label for="mostly-male">男性が多い</label>
+            <input type="radio" name="balance" value="女性が多い" id="mostly-female" />
+            <label for="mostly-female">女性が多い</label>
+          </div>
+          <div id="seat-option">
+            <input type="number" id="row-seat" min="2" max="500" step="1" />
+            <div>列(横)</div>
+            <input type="checkbox" id="social-distance">
+            <label for="social-distance">Social Distance</label>
+          </div>
+        </div>
+        <div class="decision-button"><button id="decision-button">決定</button></div>
+      </div>
+      <div>
+        <div id="drinking-lottery">
+          <div class="sex-button">
+            <button id="male-button">男性</button>
+            <button id="female-button">女性</button>
+          </div>
+          <input type="text" id="user-name" maxlength="4" placeholder="ニックネームがあれば" />
+          <div class="word-count">4文字まで表示されます</div>
+        </div>
+        <div id="shuffle">
+          <div id="drinking-timer">
+            <h3>Timer</h3>
+            <div id="timer">00:00:00</div>
+            <div id="timer-radio">
+              <input type="radio" name="timer" value="60" id="one-hour" checked />
+              <label for="one-hour">1時間</label>
+              <input type="radio" name="timer" value="30" id="half-hour" />
+              <label for="half-hour">30分</label>
+              <input type="radio" name="timer" value="15" id="quarter-hour" />
+              <label for="quarter-hour">15分</label>
+              <!--<input type="radio" name="timer" value="1" id="test-hour" />
+              <label for="test-hour">1分</label>-->
+            </div>
+            <div class="start-button"><button id="start-button">Start</button></div>
+          </div>
+          <div class="shuffle-button"><button id="shuffle-button">SHUFFLE</button></div>
+        </div>
+        <div id="meeting-lottery">
+          <button id="meeting-lottery-button">抽選</button>
+        </div>
+      </div>
+      <div id="result"></div>
+    </div>
+  </header>
+  <div id="seats"></div>
+  <script src="./seats.js"></script>
+</body>
+
+</html>
