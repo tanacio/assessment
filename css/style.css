@@ -419,8 +419,8 @@ header label {
 
 #seats > div.current {
   background: #ffdd12;
-  -webkit-box-shadow: inset 3px 3px 6px #d7bc0f, inset -3px -3px 6px #fffe15;
-          box-shadow: inset 3px 3px 6px #d7bc0f, inset -3px -3px 6px #fffe15;
+  -webkit-box-shadow: inset 3px 3px 6px #d7bc0f, inset -3px -3px 6px #fffe15 !important;
+          box-shadow: inset 3px 3px 6px #d7bc0f, inset -3px -3px 6px #fffe15 !important;
 }
 
 #seats > div figure {
@@ -524,4 +524,3 @@ header label {
 #seats.over-columns40 > div:after {
   margin: -12px 0 0 -6px !important;
 }
-/*# sourceMappingURL=style.css.map */
